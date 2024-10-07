@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>@yield('title', 'Mano puslapis')</title>
-    <!-- Įtraukite CSS ar JS failus čia -->
+    <link rel="stylesheet" href="{{ asset('css/simple.css') }}">
+
 </head>
 <body>
 <nav>
@@ -19,7 +20,7 @@
 </div>
 
 <footer>
-    <p>© 2024 Jūsų Vardas</p>
+    <p>© 2024 Ronaldas</p>
 </footer>
 </body>
 </html>
