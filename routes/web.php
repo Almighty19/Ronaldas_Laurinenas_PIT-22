@@ -1,12 +1,13 @@
 <?php
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KlientasController;
 use App\Http\Controllers\DarbuotojasController;
-use App\Http\Controllers\Adminas\UserController;
-use App\Http\Controllers\Adminas\ConferenceController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ConferenceController;
 
 // Pagrindinis puslapis
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']); // Šis nurodo, kad pagrindinis puslapis bus rodomas iš HomeController
 
 // Kliento posistemis
 Route::prefix('client')->group(function () {
@@ -34,20 +35,3 @@ Route::prefix('admin')->group(function () {
     Route::post('conference/{id}/update', [ConferenceController::class, 'update']);
     Route::delete('conference/{id}', [ConferenceController::class, 'destroy']);
 });
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-//
-//Route::get('/', function () {
-//    return view('welcome');
-//});

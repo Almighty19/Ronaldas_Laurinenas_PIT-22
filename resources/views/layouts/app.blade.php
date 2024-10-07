@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>@yield('title', 'Mano puslapis')</title>
-
+    <!-- Įtraukite CSS ar JS failus čia -->
 </head>
 <body>
 <nav>
