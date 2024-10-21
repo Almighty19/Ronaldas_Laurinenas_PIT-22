@@ -3,7 +3,7 @@
 @section('title', 'Darbuotojo konferencijos')
 
 @section('content')
-    <h1>Darbuotojo konferencijos</h1>
+    <h1>Konferencijų sąrašas darbuotojui</h1>
     <ul>
         @foreach($conferences as $conference)
             <li>
@@ -11,7 +11,4 @@
             </li>
         @endforeach
     </ul>
-    @if($conferences->isEmpty())
-        <p>Šiuo metu nėra suplanuotų konferencijų.</p>
-    @endif
 @endsection

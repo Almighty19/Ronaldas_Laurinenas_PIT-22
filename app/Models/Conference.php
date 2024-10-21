@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,4 +10,11 @@ class Conference extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'description', 'date', 'location'];
+
+    public function participants()
+    {
+        return $this->hasMany(Participant::class);
+    }
 }
+
+

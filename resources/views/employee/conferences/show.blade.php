@@ -4,9 +4,19 @@
 
 @section('content')
     <h1>{{ $conference->title }}</h1>
-    <p><strong>Aprašymas:</strong> {{ $conference->description }}</p>
-    <p><strong>Data:</strong> {{ $conference->date }}</p>
-    <p><strong>Vieta:</strong> {{ $conference->location }}</p>
+    <p>{{ $conference->description }}</p>
+    <p>Data: {{ $conference->date }}</p>
+    <p>Vieta: {{ $conference->location }}</p>
 
-    <a href="{{ route('employee.conferences.index') }}">Grįžti į konferencijų sąrašą</a>
+    <h2>Klientai</h2>
+    @if ($conference->participants->isEmpty())
+        <p>Nėra klientu :(</p>
+    @else
+        <ul>
+            @foreach ($conference->participants as $participant)
+                <li>{{ $participant->name }}</li>
+            @endforeach
+        </ul>
+    @endif
 @endsection
+

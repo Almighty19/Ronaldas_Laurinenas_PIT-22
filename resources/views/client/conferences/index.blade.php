@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Planuojamos konferencijos')
+@section('title', 'Konferencijų sąrašas')
 
 @section('content')
-    <h1>Planuojamos konferencijos</h1>
+    <h1>Konferencijų sąrašas</h1>
     <ul>
-        @foreach($conferences as $conference)
+        @foreach ($conferences as $conference)
             <li>
                 <a href="{{ route('client.conference.show', $conference->id) }}">{{ $conference->title }}</a>
                 <form action="{{ route('client.conference.register') }}" method="POST">
@@ -16,8 +16,5 @@
             </li>
         @endforeach
     </ul>
-    @if($conferences->isEmpty())
-        <p>Šiuo metu nėra suplanuotų konferencijų.</p>
-    @endif
 @endsection
 

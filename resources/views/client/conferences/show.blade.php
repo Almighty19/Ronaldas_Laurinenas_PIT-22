@@ -4,9 +4,7 @@
 
 @section('content')
     <h1>{{ $conference->title }}</h1>
-    <p><strong>Aprašymas:</strong> {{ $conference->description }}</p>
-    <p><strong>Data:</strong> {{ $conference->date }}</p>
-    <p><strong>Vieta:</strong> {{ $conference->location }}</p>
-
-    <a href="{{ route('client.conferences.index') }}">Grįžti į konferencijų sąrašą</a>
+    <p>{{ $conference->description }}</p>
+    <p>Data: {{ $conference->date }}</p>
+    <p>Vieta: {{ $conference->location }}</p>
 @endsection

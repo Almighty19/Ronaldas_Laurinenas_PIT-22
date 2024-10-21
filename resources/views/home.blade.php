@@ -4,5 +4,5 @@
 
 @section('content')
     <h1>Sveiki atvyke į konferencijų puslapį !</h1>
-    <p>Čia galėsite pamatyti konferencijas ir prisiregistruoti</p>
+    <p>Čia galėsite pamatyti konferencijas ir prisiregistruoti pasirinktai konferencijai</p>
 @endsection

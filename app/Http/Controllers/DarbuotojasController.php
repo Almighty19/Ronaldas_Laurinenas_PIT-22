@@ -11,11 +11,15 @@ class DarbuotojasController extends Controller
         $conferences = Conference::all();
         return view('employee.conferences.index', compact('conferences'));
     }
-
     public function show($id)
     {
-        $conference = Conference::with('registrations')->findOrFail($id); // Gauti su registraca
+        $conference = Conference::with('participants')->findOrFail($id);
         return view('employee.conferences.show', compact('conference'));
     }
+
+
+
+
+
 }
 
