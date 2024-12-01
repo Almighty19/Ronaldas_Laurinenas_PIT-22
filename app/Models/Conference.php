@@ -9,6 +9,9 @@ class Conference extends Model
 {
     use HasFactory;
 
+    // Išjungti automatinį created_at ir updated_at laukų valdymą
+    public $timestamps = false;
+
     protected $fillable = ['title', 'description', 'date', 'location'];
 
     public function participants()
@@ -16,5 +19,6 @@ class Conference extends Model
         return $this->hasMany(Participant::class);
     }
 }
+
 
 

@@ -28,9 +28,11 @@ class ConferenceController extends Controller
             'location' => 'required',
         ]);
 
-        Conference::create($request->all());
+        Conference::create($request->only('title', 'description', 'date', 'location'));
+
         return redirect()->route('admin.conferences')->with('success', 'Konferencija sukurta!');
     }
+
 
     public function edit($id)
     {
