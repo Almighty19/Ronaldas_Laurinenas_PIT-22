@@ -11,6 +11,7 @@
         <a href="/client/conferences">Klientas</a>
         <a href="/employee/conferences">Darbuotojas</a>
     <a href="{{ route('admin.home') }}">Admin</a>
+    <a href="{{ route('register') }}">Registracija</a>
 
 
 </nav>

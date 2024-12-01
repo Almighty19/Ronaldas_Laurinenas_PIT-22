@@ -1,12 +1,18 @@
 <?php
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KlientasController;
 use App\Http\Controllers\DarbuotojasController;
 use App\Http\Controllers\Adminas\UserController;
 use App\Http\Controllers\Adminas\ConferenceController;
+use App\Http\Controllers\Auth\RegisterController;
 
 // Pagrindinis puslapis
 Route::get('/', [HomeController::class, 'index']);
+
+// Registracija
+Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('register', [RegisterController::class, 'register']);
 
 // Kliento posistemis
 Route::prefix('client')->group(function () {
@@ -38,5 +44,6 @@ Route::prefix('admin')->group(function () {
     Route::post('conference/{id}/update', [ConferenceController::class, 'update'])->name('admin.conference.update');
     Route::delete('conference/{id}', [ConferenceController::class, 'destroy'])->name('admin.conference.destroy');
 });
+
 
 
