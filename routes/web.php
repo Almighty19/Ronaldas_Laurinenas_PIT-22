@@ -23,8 +23,8 @@ Route::prefix('client')->group(function () {
 
 // Darbuotojo posistemis
 Route::prefix('employee')->group(function () {
-    Route::get('conferences', [DarbuotojasController::class, 'index'])->name('employee.conference.index'); // Pakeista
-    Route::get('conference/{id}', [DarbuotojasController::class, 'show'])->name('employee.conference.show'); // Pakeista
+    Route::get('conferences', [DarbuotojasController::class, 'index'])->name('employee.conference.index');
+    Route::get('conference/{id}', [DarbuotojasController::class, 'show'])->name('employee.conference.show');
 });
 
 // Administratoriaus puslapis
